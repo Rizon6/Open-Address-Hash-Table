@@ -38,7 +38,7 @@ class HashTable:
         index = self.horner_hash(key)
         initial_index = index
 
-        while True:
+        while self.table[index] is not None:
             if self.table[index][0] == key:
                 return self.table[index][1]  # Return value if key is same
 
