@@ -18,8 +18,8 @@ class HashTable:
             mod = self.size # so you can set the mod in the parameter, defaults to size of table
         hash_value = 0
 
-        for char in key:
-            hash_value = (hash_value * base + ord(char)) % mod
+        for char in key: # loop thru each character in string
+            hash_value = (hash_value * base + ord(char)) % mod # each character adds some amount to hash value
         return hash_value
     
     def insert(self, key, value):
